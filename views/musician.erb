@@ -1,0 +1,40 @@
+  <div>
+    <h2><%= @musician['name'] %></h2>
+    <p><span>Bio: </span><%= @musician['bio'] %></p>
+
+    <% @musician.bands.each do |band| %>
+    <div><span>Is a Member of: </span>
+      <p><a href="/bands/<%= band['id'] %>"><%= band['bandname'] %></a></p>
+      <p><span>Genre: </span><%= band['genre'] %></p>
+    </div>
+    <% end %>
+
+    <p><span>Instruments: </span><%= @musician['instruments'] %></p>
+    <p><span>Location: </span><%= @musician['location'] %></p>
+    <p><span>Email: </span><%= @musician['email'] %></p>
+
+    <% unless @musician['youtube'].nil? || @musician['youtube'].empty? %>
+      <span>YouTube: </span><a href="<%= @musician['youtube'] %>"><%= @musician['youtube'] %></a>
+    <% end %>
+
+    <% unless @musician['soundcloud'].nil? || @musician['soundcloud'].empty? %>
+      <span>SOUNDCLOUD: </span> <a href="<%= @musician['soundcloud'] %>"><%= @musician['soundcloud'] %></a>
+    <% end %>
+
+    <% unless @musician['bandcamp'].nil? || @musician['bandcamp'].empty? %>
+      <span>BANDCAMP: </span><a href="<%= @musician['bandcamp'] %>"><%= @musician['bandcamp'] %></a>
+    <% end %>
+
+  </div>
+
+<form action="/register" method="get">
+  <button>Register Band</button>
+</form>
+
+<form action="/musicians/<%= @musician['id'] %>/edit" method="get">
+  <button>Edit Account</button>
+</form>
+
+<form action="/musicians/<%= @musician['id'] %>" method="post">
+  <button>Delete Account</button>
+</form>

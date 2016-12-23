@@ -1,0 +1,16 @@
+<div>
+
+  <h2>Bands Currently Searching for Musicians</h2>
+
+  <% @bands.each do |band| %>
+
+  <div>
+    <p><a href="/bands/<%= band['id'] %>"><%= band['bandname'] %></a></p>
+    <p><span>Genre: </span><%= band['genre'] %></p>
+    <p><span>Location: </span><%= band['location'] %></p>
+    <p><span>Looking For: </span><%= band['lookingfor'] %></p>
+  </div>
+
+  <% end %>
+
+</div>

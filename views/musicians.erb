@@ -1,0 +1,13 @@
+<div>
+
+  <% @musicians.each do |musician| %>
+
+  <div>
+    <p><a href="/musicians/<%= musician['id'] %>"><%= musician['name'] %></a></p>
+    <p><%= musician['instruments'] %></p>
+    <p><%= musician['location'] %></p>
+  </div>
+
+  <% end %>
+
+</div>

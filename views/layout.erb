@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type"text/css" href="/style.css?v=1" />
+  <link href="https://fonts.googleapis.com/css?family=Heebo:300,400" rel="stylesheet">
+  <title>Band Wagon</title>
+</head>
+<body>
+  <div class="home-wrapper">
+    <header>
+      <h1><a href="/">•BANDWAGON•</a></h1>
+    </header>
+
+    <div class="links">
+      <a href="/bands" >Bands</a>
+      <a href="/musicians" >Musicians</a>
+      <% unless logged_in? %>
+        <a href="/signup" >Sign Up</a>
+      <% end %>
+      <% unless logged_in? %>
+        <a href="/login" >Login</a>
+      <% end %>
+      <% if logged_in? %>
+        <form action="/logout" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <input type="submit" value="Logout" />
+        </form>
+      <% end %>
+    </div>
+    <%= yield %>
+  </div>
+  <script>
+    if (window.location.pathname == '/') {
+      document.getElementsByClassName('home-wrapper')[0].style.backgroundImage = 'url(http://m1.22slides.com/empirewestlive/q20a5433-1079432.jpg)';
+    }
+  </script>
+</body>
+</html>

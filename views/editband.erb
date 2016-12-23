@@ -1,0 +1,23 @@
+<h2>Edit Band Details</h2>
+
+<form action="/bands/<%= @band['id'] %>/edit" method="post">
+
+  <label>Band Name</label>
+  <input type="text" name="bandname" value="<%= @band['bandname'] %>">
+  <label>Genre</label>
+  <input type="text" name="genre" value="<%= @band['genre'] %>">
+  <label>Bio</label>
+  <textarea type="text" name="bio" value="<%= @band['bio'] %>"></textarea>
+  <label>Location</label>
+  <input type="text" name="location" value="<%= @band['location'] %>">
+  <label>Musician/'s Your Band Is Looking For</label>
+  <input type="text" name="lookingfor" value="<%= @band['lookingfor'] %>">
+  <label>YouTube</label>
+  <input type="text" name="youtube" value="<%= @band['youtube'] %>">
+  <label>SOUNDCLOUD</label>
+  <input type="text" name="soundcloud" value="<%= @band['soundcloud'] %>">
+  <label>BANDCAMP</label>
+  <input type="text" name="bandcamp" value="<%= @band['bandcamp'] %>">
+  <button>Save</button>
+
+</form>

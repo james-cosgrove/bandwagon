@@ -1,0 +1,25 @@
+<h2>Edit Your Details</h2>
+
+<form action="/musicians/<%= @musician['id'] %>/edit" method="post">
+
+  <label>Name</label>
+  <input type="text" name="name" value="<%= @musician['name'] %>">
+  <label>Username</label>
+  <input type="text" name="username" value="<%= @musician['username'] %>">
+  <label>Email</label>
+  <input type="text" name="email" value="<%= @musician['email'] %>">
+  <label>Instrument/'s You Play</label>
+  <input type="text" name="instruments" value="<%= @musician['instruments'] %>">
+  <label>About You</label>
+  <textarea type="text" name="location" value="<%= @musician['bio'] %>"></textarea>
+  <label>Your Location</label>
+  <input type="text" name="location" value="<%= @musician['location'] %>">
+  <label>YouTube</label>
+  <input type="text" name="youtube" value="<%= @musician['youtube'] %>">
+  <label>SOUNDCLOUD</label>
+  <input type="text" name="soundcloud" value="<%= @musician['soundcloud'] %>">
+  <label>BANDCAMP</label>
+  <input type="text" name="bandcamp" value="<%= @musician['bandcamp'] %>">
+  <button>Save</button>
+
+</form>
