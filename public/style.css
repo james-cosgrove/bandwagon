@@ -54,6 +54,10 @@ h2 {
   text-align: center;
 }
 
+form {
+  margin-bottom: 20px;
+}
+
 .home-wrapper {
   /*background-color:rgb(214, 107, 62);*/
   /*background: -webkit-linear-gradient(top right, #FFB75E , #ED8F03);*/
