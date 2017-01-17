@@ -2,7 +2,7 @@
 
   <% @musicians.each do |musician| %>
 
-  <div>
+  <div class='display'>
     <p><a href="/musicians/<%= musician['id'] %>"><%= musician['name'] %></a></p>
     <p><%= musician['instruments'] %></p>
     <p><%= musician['location'] %></p>

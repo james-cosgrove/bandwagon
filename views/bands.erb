@@ -4,7 +4,7 @@
 
   <% @bands.each do |band| %>
 
-  <div>
+  <div class='display'>
     <p><a href="/bands/<%= band['id'] %>"><%= band['bandname'] %></a></p>
     <p><span>Genre: </span><%= band['genre'] %></p>
     <p><span>Location: </span><%= band['location'] %></p>
