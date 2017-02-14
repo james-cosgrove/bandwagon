@@ -147,6 +147,7 @@ post '/musicians/:id/edit' do
   @params.delete('splat')
   @params.delete('captures')
   @musician = Musician.find_by(id: @params[:id])
+  binding.pry
   @musician.update(@params)
   if @musician.save
     redirect to "/musicians/#{@musician.id}"
